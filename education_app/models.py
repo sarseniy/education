@@ -9,3 +9,13 @@ class Word(models.Model):
 
     def __str__(self):
         return self.word_text
+
+
+class Lesson(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField(blank=True)
+    words = models.ManyToManyField(Word, related_name='lessons')  # связь с моделью Word
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
