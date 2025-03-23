@@ -1,0 +1,20 @@
+{% extends 'education_app/base.html' %}
+{% block content %}
+  <h2>Список уроков</h2>
+  <ul>
+    {% for lesson in lessons %}
+      <li>
+        <strong>{{ lesson.title }}</strong>
+        <br>
+        Описание: {{ lesson.description }}
+        <br>
+        Слова в уроке:
+        <ul>
+          {% for word in lesson.words.all %}
+            <li>{{ word.word_text }} — {{ word.translation }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

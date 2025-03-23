@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('words/', views.word_list, name='word_list'),
     path('words/add/', views.word_add, name='word_add'),
-    # добавьте другие пути, если нужно
+    path('lessons/', views.lesson_list, name='lesson_list'),
+    path('lessons/add/', views.lesson_add, name='lesson_add'),
 ]

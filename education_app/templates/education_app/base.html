@@ -9,12 +9,14 @@
 </head>
 <body>
     <header>
-        <h1>Мой учебный сервис</h1>
-        <nav>
-            <a href="{% url 'home' %}">Главная</a> |
-            <a href="{% url 'word_list' %}">Слова</a> |
-            <a href="{% url 'word_add' %}">Добавить слово</a>
-        </nav>
+      <h1>Мой учебный сервис</h1>
+      <nav>
+        <a href="{% url 'home' %}">Главная</a> |
+        <a href="{% url 'word_list' %}">Слова</a> |
+        <a href="{% url 'word_add' %}">Добавить слово</a> |
+        <a href="{% url 'lesson_list' %}">Уроки</a> |
+        <a href="{% url 'lesson_add' %}">Создать урок</a>
+      </nav>
     </header>
 
     <div>
