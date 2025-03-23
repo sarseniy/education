@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Учебный сервис</title>
+    <link rel="stylesheet" href="{% static 'education_app/css/main.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Мой учебный сервис</h1>
+        <nav>
+            <a href="{% url 'home' %}">Главная</a> |
+            <a href="{% url 'word_list' %}">Слова</a> |
+            <a href="{% url 'word_add' %}">Добавить слово</a>
+        </nav>
+    </header>
+
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>© 2025 Учебный проект</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'education_app/base.html' %}
+{% block content %}
+  <h2>Список слов</h2>
+  <table>
+    <tr>
+      <th>Слово</th>
+      <th>Перевод</th>
+      <th>Изображение</th>
+    </tr>
+    {% for word in words %}
+    <tr>
+      <td>{{ word.word_text }}</td>
+      <td>{{ word.translation }}</td>
+      <td>{% if word.image_url %}<img src="{{ word.image_url }}" alt="image" width="100">{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
