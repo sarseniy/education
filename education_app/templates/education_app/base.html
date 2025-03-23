@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+      <div class="container">
       <h1>Мой учебный сервис</h1>
       <nav>
         <a href="{% url 'home' %}">Главная</a> |
@@ -17,15 +18,19 @@
         <a href="{% url 'lesson_list' %}">Уроки</a> |
         <a href="{% url 'lesson_add' %}">Создать урок</a>
       </nav>
+      </div>
     </header>
 
-    <div>
+    <main class="container content">
         {% block content %}
         {% endblock %}
-    </div>
+    </main>
+
 
     <footer>
+        <div class="container">
         <p>© 2025 Учебный проект</p>
+        </div>
     </footer>
 </body>
 </html>
